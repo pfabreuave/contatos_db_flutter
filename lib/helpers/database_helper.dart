@@ -29,7 +29,7 @@ class DatabaseHelper {
   }
 
   Future<Database> initializeDatabase() async {
-    Directory directory = (getApplicationDocumentsDirectory) as Directory;
+    Directory directory = await getApplicationDocumentsDirectory();
     String path = directory.path + 'contatos.db';
 
     var contatosDatabase =
